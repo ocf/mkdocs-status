@@ -1,0 +1,73 @@
+site_name: OCF Status Updates
+site_url: https://bestdocs.ocf.io
+
+repo_url: https://github.com/ocf/mkdocs-status
+repo_name: ocf/mkdocs-status
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  logo: assets/penguin.svg
+  favicon: assets/favicon.ico
+  custom_dir: overrides
+  features: 
+    - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.share
+    - content.code.copy
+    - content.action.edit
+    - content.action.view
+  font:
+    text: Roboto
+    code: Meslo
+  palette:
+    # Palette toggle for automatic mode
+    #- media: "(prefers-color-scheme)"
+    #  toggle:
+    #    icon: material/brightness-auto
+    #    name: Switch to light mode
+    ## Palette toggle for light mode
+    #- media: "(prefers-color-scheme: light)"
+    #  scheme: ocf-light
+    #  toggle:
+    #    icon: material/brightness-7
+    #    name: Switch to dark mode
+
+    ## Palette toggle for dark mode
+    #- media: "(prefers-color-scheme: dark)"
+    #  scheme: ocf-dark
+    #  toggle:
+    #    icon: material/brightness-4
+    #    name: Switch to light mode
+extra_css:
+  - stylesheets/extra.css
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.tilde
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - md_in_html
+plugins:
+  - search
+  - git-revision-date-localized:
+      enabled: !ENV [CI, false]
+  - blog:
+      blog_dir: news
+  - rss:
+      match_path: updates/posts/.* 
+      date_from_meta:
+        as_creation: date
+  - awesome-nav
+extra:
+  generator: false
+  homepage: https://ocf.io
