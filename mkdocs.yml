@@ -62,9 +62,9 @@ plugins:
   - git-revision-date-localized:
       enabled: !ENV [CI, false]
   - blog:
-      blog_dir: updates
+      blog_dir: .
   - rss:
-      match_path: updates/posts/.* 
+      match_path: posts/.* 
       date_from_meta:
         as_creation: date
 extra:

@@ -1,4 +1,2 @@
----
-template: redirect.html
-location: updates
----
+# News from the staff team
+
