@@ -62,7 +62,7 @@ plugins:
   - git-revision-date-localized:
       enabled: !ENV [CI, false]
   - blog:
-      blog_dir: news
+      blog_dir: updates
   - rss:
       match_path: updates/posts/.* 
       date_from_meta:
