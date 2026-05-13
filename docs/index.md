@@ -1,2 +1,6 @@
-# Latest News
+---
+hide:
+  - navigation
+---
+# Recent Updates
 
