@@ -1,2 +1,2 @@
-# News from the staff team
+# Latest News
 
