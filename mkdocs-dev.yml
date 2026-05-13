@@ -1,3 +1,0 @@
-INHERIT: mkdocs.yml
-exclude_docs: |
-  bod/**
