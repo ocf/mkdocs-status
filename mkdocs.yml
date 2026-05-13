@@ -67,7 +67,6 @@ plugins:
       match_path: updates/posts/.* 
       date_from_meta:
         as_creation: date
-  - awesome-nav
 extra:
   generator: false
   homepage: https://ocf.io
