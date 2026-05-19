@@ -1,18 +1,11 @@
-name: ci 
+name: build
+
 on:
-  push:
-    branches:
-      - main
-permissions:
-  contents: write
-  pages: write
-  id-token: write
+  pull_request:
+
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -27,9 +20,3 @@ jobs:
             mkdocs-material-
       - run: pip install -r requirements.txt 
       - run: mkdocs build
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: 'site/'
-      - uses: actions/deploy-pages@v4
-        id: deployment
