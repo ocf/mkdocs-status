@@ -5,7 +5,7 @@ site_url: https://status.ocf.berkeley.edu
 # repo_name: ocf/mkdocs-status
 # edit_uri: edit/main/docs/
 
-theme:
+theme
   name: material
   logo: assets/penguin.svg
   favicon: assets/favicon.ico
