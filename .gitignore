@@ -1,2 +1,4 @@
+site/
+
 # macOS specific
 .DS_STORE
