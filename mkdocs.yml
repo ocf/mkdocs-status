@@ -9,7 +9,6 @@ theme:
   name: material
   logo: assets/penguin.svg
   favicon: assets/favicon.ico
-  # custom_dir: overrides
   features: 
     - navigation.instant
     - navigation.tabs
